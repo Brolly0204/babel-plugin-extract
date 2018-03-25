@@ -70,8 +70,15 @@ module.exports = function(babel) {
 ## build
 
 ```
-npm run build
+npm run build // 此时编译后的包变小了
 ```
+
+## 源码地址
+先npm install 然后将源码目录中babel-plugin-extract目录 挪到 node_modules下，npm run build
+[babel-plugin-extract](https://github.com/Lwenli1224/babel-plugin-extract)
+
+
+
 
 ## 参考
 [Babel 插件开发指南](https://github.com/brigand/babel-plugin-handbook/blob/master/translations/zh-Hans/README.md#asts)
