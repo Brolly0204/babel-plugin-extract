@@ -1,19 +1,24 @@
 # babel插件编写
 
-> 编写一个babel插件模块按需打包
+> 编写一个模块按需打包的babel插件
+
+当我们导入lodash中指定的工具函数时 会将整个lodash打包进来
 
 ```
-// 当我们导入lodash中指定的工具函数时 会将整个lodash打包进来
 import {flattenDeep, chunk} from 'lodash'
 
-// 按需打包 但是这样写有些麻烦 我们想由上面写法 自动分解为下面写法 所以我们就编写一个babel插件
+```
+
+换成按需引入的写法 但是这样写有些麻烦 我们想由上面写法 自动分解为下面写法 所以我们就编写一个babel插件
+
+```
 import flattenDeep from 'lodash/flattenDeep'
 import chunk from 'lodash/chunk'
 ```
 
 ##
 
-install packages
+Install package
 
 ```
 npm i babel-core -D
@@ -70,7 +75,7 @@ module.exports = function(babel) {
 ## build
 
 ```
-npm run build // 此时编译后的包变小了
+npm run build // 此时编译后的bundle.js变小了
 ```
 
 ## 源码地址
