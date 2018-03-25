@@ -28,6 +28,7 @@ npm i babel-types -D
 在当前工程的node_modules下创建一个babel-plugin-extract目录 里面创建index.js
 
 ```
+
 const babel = require('babel-core');
 const types = require('babel-types');
 
@@ -35,6 +36,7 @@ const types = require('babel-types');
 // import flattenDeep from 'lodash/flattenDepp'
 // import chunk from 'lodash/chunk'
 
+// Babel将源码转换AST之后，通过遍历AST树（其实就是一个js对象），对树做一些修改，然后再将AST转成code，即成源码。
 let visitor = {
     // import 语句解析时触发该函数
     ImportDeclaration(path, ref = {opts: {}}) {  //path 语句抽象语法树 opts 插件参数
