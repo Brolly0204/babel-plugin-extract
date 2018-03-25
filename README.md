@@ -72,7 +72,7 @@ module.exports = function(babel) { // 将插件导出
         [
             "extract", // 配置插件
             {
-                "library": "lodash" // 指定使用范围
+                "library": "lodash" // 指定处理的库
             }
         ]
     ]
