@@ -16,9 +16,7 @@ import flattenDeep from 'lodash/flattenDeep'
 import chunk from 'lodash/chunk'
 ```
 
-##
-
-Install package
+## Install package
 
 ```
 npm i babel-core -D
